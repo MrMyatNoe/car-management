@@ -1,6 +1,5 @@
 package com.truck.car.response;
 
-
 public class DefaultResponse {
     
     private String message;

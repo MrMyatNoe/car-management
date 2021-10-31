@@ -11,16 +11,20 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "tests")
-public class Test {
-    
-    @Id
+@Table(name="roles")
+public class Role {
+	
+	@Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
 	@Column(columnDefinition = "BINARY(16)")
-    private UUID id;
-    private String name;
-    private double number;
+	private UUID id;
+	private String name;
+	
+	public Role() {
+		
+	}
+	
 	public UUID getId() {
 		return id;
 	}
@@ -33,14 +37,9 @@ public class Test {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getNumber() {
-		return number;
-	}
-	public void setNumber(double number) {
-		this.number = number;
-	}
 	@Override
 	public String toString() {
-		return "Test [id=" + id + ", name=" + name + ", number=" + number + "]";
-	}
+		return "Role [id=" + id + ", name=" + name + "]";
+	}	
 }
+
