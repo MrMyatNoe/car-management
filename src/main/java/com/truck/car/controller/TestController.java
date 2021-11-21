@@ -83,8 +83,8 @@ public class TestController extends BaseController{
       if (test.getName() == null) {
         throw new BadRequestException("Please enter Test name.");
       }
-      if (test.getNumber() == 0.0) {
-        throw new BadRequestException("Plese enter Test number.");
-      }
+      // if (test.getNumber() == 0.0) {
+      //   throw new BadRequestException("Plese enter Test number.");
+      // }
     }
 }

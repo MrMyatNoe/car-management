@@ -4,8 +4,9 @@ import com.truck.car.response.DefaultResponse;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
-
+@CrossOrigin(origins = "*", maxAge = 3600)
 public abstract class BaseController {    
 
     protected ResponseEntity<Object> createResponse(Object object){
