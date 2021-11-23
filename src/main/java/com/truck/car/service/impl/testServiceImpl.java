@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class testServiceImpl implements ITestService{
+public class TestServiceImpl implements ITestService{
 
     @Autowired
     TestRepository testRepository;
