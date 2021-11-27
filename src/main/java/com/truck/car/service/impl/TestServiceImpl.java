@@ -33,16 +33,16 @@ public class TestServiceImpl implements ITestService{
     }
 
     @Override
-    public Test deleteDataById(UUID id) {
+    public Test deleteDataById(long id) {
         getDataById(id);
         testRepository.deleteById(id);
         return getDataById(id);
     }
 
     @Override
-    public Test getDataById(UUID id) {
-        String str = String.valueOf(id).replace("-", "").toUpperCase();
-		Test test = testRepository.findByUUID(str);
+    public Test getDataById(long id) {
+        //String str = String.valueOf(id).replace("-", "").toUpperCase();
+		Test test = testRepository.findById(id);
         if(test == null)
             throw new NotFoundException(id + "not found");
         return test;

@@ -14,7 +14,7 @@ public interface IBaseService<T> {
 
     T updateData(T t);
 
-    T deleteDataById(UUID id);
+    T deleteDataById(long id);
 
-    T getDataById(UUID id);
+    T getDataById(long id);
 }

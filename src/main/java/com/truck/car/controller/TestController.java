@@ -55,7 +55,7 @@ public class TestController extends BaseController{
     }
 
     @RequestMapping(method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> deleteById(@RequestParam("id") UUID id){
+    public ResponseEntity<Object> deleteById(@RequestParam("id") long id){
       try {
         logInfo("Delete Test By Id");
         return createResponse(testService.deleteDataById(id));
@@ -66,7 +66,7 @@ public class TestController extends BaseController{
     }
 
     @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE, value = "/{id}")
-    public ResponseEntity<Object> getDataById(@PathVariable("id") UUID id) {
+    public ResponseEntity<Object> getDataById(@PathVariable("id") long id) {
       logInfo("Get Test By Id" + id) ;
       try {
         return successResponse(testService.getDataById(id));
